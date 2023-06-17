@@ -9,6 +9,7 @@ from pydantic import BaseModel, Field
 from langchain.chains import PALChain, LLMMathChain, LLMChain
 from PromptTemplates import Codeforces_Prompt, Self_Evaluate_Prompt, Zero_Shot_Prompt, Tree_Of_Thought_Prompt, Genetic_Prompting
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
+import tiktoken
 import os
 os.environ["OPENAI_API_KEY"] = "Insert your OpenAI_SAPI_Key"
 
