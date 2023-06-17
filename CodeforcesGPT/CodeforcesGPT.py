@@ -11,7 +11,7 @@ from AccuracyPrompts import Codeforces_Prompt, Self_Evaluate_Prompt, Zero_Shot_P
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 import tiktoken
 import os
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "Insert your OpenAI API here"
 
 
 llm = OpenAI(model_name= 'text-davinci-002', temperature= 0.9, verbose = True, max_tokens = 300)
