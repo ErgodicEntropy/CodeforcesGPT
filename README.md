@@ -1,2 +1,2 @@
 # CodeforcesGPT
-Well, the name says it all lol 
+This project is made for facilitating Codeforces problem-solving, and competitive programming at large.
