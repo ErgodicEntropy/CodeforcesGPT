@@ -7,17 +7,18 @@ from langchain.agents import initialize_agent, load_tools, Tool
 import streamlit as st
 from pydantic import BaseModel, Field
 from langchain.chains import PALChain, LLMMathChain, LLMChain
-from PromptTemplates import Codeforces_Prompt, Self_Evaluate_Prompt, Zero_Shot_Prompt, Tree_Of_Thought_Prompt, Genetic_Prompting
+from AccuracyPrompts import Codeforces_Prompt, Self_Evaluate_Prompt, Zero_Shot_Prompt, Tree_Of_Thought_Prompt, Genetic_Prompting
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 import tiktoken
 import os
-os.environ["OPENAI_API_KEY"] = "Insert your OpenAI_SAPI_Key"
+os.environ["OPENAI_API_KEY"] = "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"
 
 
-llm = ChatOpenAI(model_name= 'text-davinci-002', temperature= 0.9, verbose = True, max_tokens = 300)
+llm = OpenAI(model_name= 'text-davinci-002', temperature= 0.9, verbose = True, max_tokens = 300)
+encoding = tiktoken.encoding_for_model("text-davinci-002")
 
 local_path = (
-    "Insert path"  # replace with your desired local file path
+    "D:/nomic.ai/GPT4All/ggml-gpt4all-j-v1.3-groovy.bin"  # replace with your desired local file path
 )
 callbacks = [StreamingStdOutCallbackHandler()]
 #llm = GPT4All(model=local_path, callbacks=callbacks, backend="gptj", verbose=True)
